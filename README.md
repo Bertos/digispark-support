@@ -23,3 +23,40 @@ To repozytorium zawiera sterowniki USB oraz pliki **Boards Manager JSON** potrze
 Otwórz: **File → Preferences → Additional Board Manager URLs** i dodaj:
 
 - dla oryginalnej paczki:
+
+- https://github.com/Bertos/digispark-support/blob/main/digispark-support/package_digistump_index.json
+
+- dla paczki ArminJo
+
+- https://github.com/Bertos/digispark-support/blob/main/digispark-support/package_digistump2_index.json
+
+### 2. Instalacja pakietu
+1. Wejdź w **Tools → Board → Boards Manager**.
+2. Wyszukaj `Digistump AVR Boards`.
+3. Kliknij **Install**.
+
+### 3. Wybór płytki
+- **Tools → Board → Digispark (Default - 16.5 MHz)** dla zwykłego Digispark Rev 3.
+
+---
+
+## 🚀 Programowanie Digisparka
+1. Wybierz płytkę jak wyżej.
+2. Kliknij **Upload** w Arduino IDE.
+3. Gdy pojawi się komunikat *"Podłącz płytkę..."* – wtedy dopiero włóż Digisparka do USB.
+4. Kod zostanie wgrany przez USB (bez portu COM).
+
+---
+
+## ℹ️ Uwagi
+- Arduino IDE **1.8.19** jest bardziej kompatybilne niż 2.x.
+- ATtiny85 ma ograniczoną pamięć (8 KB Flash, 512 B RAM), nie wszystkie biblioteki Arduino się zmieszczą.
+- Przydatne biblioteki:
+- `TinyWireM` – I²C,
+- `DigiUSB` – komunikacja USB,
+- `Adafruit_NeoPixel` – sterowanie WS2812,
+- `SoftwareSerial` – dodatkowy UART.
+
+---
+
+✍️ Repozytorium przygotowane, aby zawsze mieć **lokalną kopię sterowników i definicji płytek**, niezależną od zewnętrznych serwerów.
